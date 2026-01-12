@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Dolphins: <input id="dolScore1" type="text"/> <input id="dolScore2" type="text"/> <input id="dolScore3" type="text"/> <br>
+    Koalas: <input id="koaScore1" type="text"/> <input id="koaScore2" type="text"/> <input id="koaScore3" type="text"/> <br>
+    <button id="btnCal">Cal Average</button>
+    <script>
+        var DolphinsScore1 = document.getElementById("dolScore1");
+        var DolphinsScore2 = document.getElementById("dolScore2");
+        var DolphinsScore3 = document.getElementById("dolScore3");
+        var KoalasScore1 = document.getElementById("koaScore1");
+        var KoalasScore2 = document.getElementById("koaScore2");
+        var KoalasScore3 = document.getElementById("koaScore3");
+
+        var btnCal = document.getElementById("btnCal");
+
+        const avg = (a, b, c) => (a+b+c)/3;
+        btnCal.onclick = function(){
+
+            var avgDolphins = avg(parseInt(DolphinsScore1.value),parseInt(DolphinsScore2.value),parseInt(DolphinsScore3.value));
+            var avgKoalas = (parseInt(KoalasScore1.value)+parseInt(KoalasScore2.value)+parseInt(KoalasScore3.value))/3;
+            console.log("Dolphins: "+avgDolphins);
+            console.log("Koalas: "+avgKoalas);
+            
+            if(avgDolphins>avgKoalas && avgDolphins >=100){
+                console.log("Dolphins is winner");
+            }else if(avgDolphins<avgKoalas && avgKoalas >=100){
+                console.log("Koalas is winner");
+            }else if(avgDolphins==avgKoalas && avgDolphins >=100){
+                console.log("DRAW!");
+            }else{
+                console.log("NO TEAM WINS THE TROPHY");
+                
+            }
+        }
+    </script>
+</body>
+</html>

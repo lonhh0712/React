@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="bill" type="text" />
+    <button id="btnCal">Cal total</button>
+
+    <script>
+        var bill = document.getElementById("bill");
+        var btnCal = document.getElementById("btnCal");
+        btnCal.onclick = function(){
+            var tip = parseFloat(bill.value)>=50 && parseFloat(bill.value) <= 300 ? parseFloat(bill.value)*0.15 : parseFloat(bill.value)*0.2;
+            console.log(`The bill was ${parseFloat(bill.value)}, the tip was ${tip.toFixed(1)}, and the total value ${(parseFloat(bill.value)+tip).toFixed(1)}.`);
+            
+        }
+    </script>
+</body>
+</html>
