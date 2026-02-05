@@ -1,0 +1,30 @@
+.btn {
+    padding: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.btn-primary {
+    background-color: rgb(83, 143, 255);
+}
+
+.btn-primary:hover{
+    background-color: rgb(33, 110, 252);
+}
+
+.btn-danger{
+    background-color: rgb(255, 94, 66);
+}
+
+.btn-danger:hover{
+    background-color: rgb(255, 48, 11);
+}
+
+.btn-success{
+    background-color: rgb(93, 255, 174);
+}
+
+.btn-success:hover{
+    background-color: rgb(0, 167, 83);
+}
