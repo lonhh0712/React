@@ -1,13 +1,18 @@
-import {UseState} from 'react';
+import { useState } from "react";
 
 function Counter() {
-  const [count, setCount] = UseState(0);
-  return(
+  // Khai báo state count, giá trị ban đầu = 0
+  const [count, setCount] = useState(0);
+
+  return (
     <div>
-        <p>You clicked {count} times</p>
-        <button onClick={() => setCount(count + 1)}>
-            Click
-        </button>
+      {/* Hiển thị giá trị state */}
+      <p>Count: {count}</p>
+
+      {/* Khi click → cập nhật state → component render lại */}
+      <button onClick={() => setCount(count + 1)}>
+        Tăng
+      </button>
     </div>
   );
 }
